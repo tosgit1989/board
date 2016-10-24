@@ -19,7 +19,7 @@ class ArticlesController extends Controller
 
     public function getCreate()
     {
-        return view('articles.create');
+        return view('articles.new');
     }
 
     public function postCreate(Request $request)
