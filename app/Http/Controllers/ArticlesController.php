@@ -26,6 +26,7 @@ class ArticlesController extends Controller
     {
         $data = $request->all();
         $article = new Article();
+        $article->posted_by = $data['title'];
         $article->title = $data['title'];
         $article->comment = $data['title'];
 
