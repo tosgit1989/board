@@ -1,7 +1,9 @@
 @extends('app')
 
 @section('content')
-<p class="page-header">記事編集</p>
+<div class="container-fluid page-title">
+    <p class="page-title-text">記事の編集</p><!--title-->
+</div>
 {!! Form::open(['action' => ['ArticlesController@postEdit', $article->id]]) !!}
 <div class="form-group">
     <label>投稿者</label>

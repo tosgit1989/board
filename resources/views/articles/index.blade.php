@@ -1,6 +1,9 @@
 @extends('app')
 
 @section('content')
+<div class="container-fluid page-title">
+    <p class="page-title-text">トップページ</p><!--title-->
+</div>    
 <h3 class="text-middle">記事一覧</h3>
 <div>
     <a href="/articles/new" class="btn btn-primary">新規作成</a>

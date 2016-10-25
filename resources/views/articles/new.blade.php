@@ -1,7 +1,9 @@
 @extends('app')
 
 @section('content')
-<p class="page-header">記事投稿</p>
+<div class="container-fluid page-title">
+    <p class="page-title-text">記事の新規作成</p><!--title-->
+</div>
 {!! Form::open() !!}
 <div class="form-group">
     <label>投稿者</label>
