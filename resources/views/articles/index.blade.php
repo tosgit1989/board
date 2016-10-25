@@ -1,38 +1,26 @@
 @extends('app')
 
 @section('content')
-<h2 class="page-header">記事一覧</h2>
+<h3 class="text-middle">記事一覧</h3>
 <div>
     <a href="/articles/new" class="btn btn-primary">新規作成</a>
 </div>
 @if (count($articles) >= 1)
-    <table class="table">
-        <thead>
-        <tr>
-            <th>タイトル</th>
-            <th>コメント</th>
-            <th>投稿者</th>
-            <th>作成日時</th>
-            <th>更新日時</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($articles as $article)
-        <tr>
-            <td>{{{ $article->title }}}</td>
-            <td>{{{ $article->comment }}}</td>
-            <td>{{{ $article->posted_by }}}</td>
-            <td>{{{ $article->created_at }}}</td>
-            <td>{{{ $article->updated_at }}}</td>
-            <td>
-                <a href="/articles/edit/{{{ $article->id }}}" class="btn btn-primary">編集</a>
-                <a href="/articles/delete/{{{ $article->id }}}" class="btn btn-danger">削除</a>
-            </td>
-        </tr>
-        @endforeach
-        </tbody>
-    </table>
+    @foreach($articles as $article)
+        <div class="panel panel-default">
+            <div class="panel-heading">{{{ $article->title }}}</div>
+            <div class="panel-body">{{{ $article->comment }}}</div>
+            <div class ="panel-footer" style = "height: 55px">
+                <div class="col-xs-3">投稿者: {{{ $article->posted_by }}}</div>
+                <div class="col-xs-3">作成: {{{ $article->created_at }}}</div>
+                <div class="col-xs-3">更新: {{{ $article->updated_at }}}</div>
+                <div class="col-xs-3">
+                    <a href="/articles/edit/{{{ $article->id }}}" class="btn btn-primary">編集</a>
+                    <a href="/articles/delete/{{{ $article->id }}}" class="btn btn-danger">削除</a>
+                </div>
+            </div>
+        </div>
+    @endforeach
 @else
     <p>投稿はありません。</p>
 @endif
