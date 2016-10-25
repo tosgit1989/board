@@ -26,8 +26,8 @@
             <td>{{{ $article->created_at }}}</td>
             <td>{{{ $article->updated_at }}}</td>
             <td>
-                <a href="/articles/edit/{{{ $article->id }}}" class="btn btn-primary btn-xs">編集</a>
-                <a href="/articles/delete/{{{ $article->id }}}" class="btn btn-danger btn-xs">削除</a>
+                <a href="/articles/edit/{{{ $article->id }}}" class="btn btn-primary">編集</a>
+                <a href="/articles/delete/{{{ $article->id }}}" class="btn btn-danger">削除</a>
             </td>
         </tr>
         @endforeach

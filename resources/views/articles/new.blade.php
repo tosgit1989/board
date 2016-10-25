@@ -16,6 +16,6 @@
     {!! Form::textarea('comment', null, ['required', 'class' => 'form-control']) !!}
 </div>
 <button type="submit" class="btn btn-primary">投稿する</button>
-<a href="/" class="btn btn-primary btn-xs">キャンセル</a>
+<a href="/" class="btn btn-secondary">キャンセル</a>
 {!! Form::close() !!}
 @endsection
