@@ -12,15 +12,15 @@
                 {!! Form::open() !!}
                 <div class="form-group">
                     <label>投稿者</label>
-                    {!! Form::input('text', 'posted_by', null, ['required', 'class' => 'form-control']) !!}
+                    {!! Form::input('text', 'posted_by', null, ['required', 'class' => 'form-control', 'placeholder' => '投稿者を入力']) !!}
                 </div>
                 <div class="form-group">
                     <label>タイトル</label>
-                    {!! Form::input('text', 'title', null, ['required', 'class' => 'form-control']) !!}
+                    {!! Form::input('text', 'title', null, ['required', 'class' => 'form-control', 'placeholder' => 'タイトルを入力']) !!}
                 </div>
                 <div class="form-group">
                     <label>コメント</label>
-                    {!! Form::textarea('comment', null, ['required', 'class' => 'form-control']) !!}
+                    {!! Form::textarea('comment', null, ['required', 'class' => 'form-control', 'placeholder' => 'コメントを入力']) !!}
                 </div>
                 <button type="submit" class="btn btn-primary">投稿する</button>
                 <a href="/" class="btn btn-secondary">キャンセル</a>
