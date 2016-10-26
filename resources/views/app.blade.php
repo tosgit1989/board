@@ -5,7 +5,7 @@
     <title>board</title>
     <link href="/css/board.css" rel="stylesheet">
 </head>
-<body style="background-color:greenyellow">
+<body style="background-color:lightgreen">
     <nav class="navbar navbar-fixed-top navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
