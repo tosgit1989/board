@@ -23,7 +23,7 @@
                     {!! Form::textarea('comment', $article->comment, ['required', 'class' => 'form-control', 'placeholder' => 'コメントを入力']) !!}
                 </div>
                 <button type="submit" class="btn btn-primary">編集する</button>
-                <a href="/" class="btn btn-secondary">キャンセル</a>
+                <a href="/" class="btn" style="background-color: silver; color: black">キャンセル</a>
                 {!! Form::close() !!}
 
             </div>

@@ -10,8 +10,8 @@
             <div class="bs-docs-section">
 
                 <p>本当に削除しますか？</p>
-                <button type="button" class="btn btn-danger">はい</button>
-                <a href="/" class="btn btn-secondary">いいえ</a>
+                <a href="/articles/delete/{{{ $article->id }}}" class="btn btn-danger">はい</a>
+                <a href="/" class="btn" style="background-color: silver; color: black">いいえ</a>
 
             </div>
         </div>
