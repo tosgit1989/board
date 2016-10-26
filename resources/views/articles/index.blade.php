@@ -9,13 +9,13 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="bs-docs-section">
-                
+
                 <div><h3 class="text-middle">記事一覧</h3></div>
                 <div><a href="/articles/new" class="btn btn-primary">新規作成</a></div>
                 @if (count($articles) >= 1)
                     @foreach($articles as $article)
                         <div class="panel panel-default">
-                            <div class="panel-heading">{{{ $article->title }}}</div>
+                            <div class="panel-heading"><strong>{{{ $article->title }}}</strong></div>
                             <div class="panel-body">{{{ $article->comment }}}</div>
                             <div class ="panel-footer" style = "height: 55px">
                                 <div class="col-xs-3">投稿者: {{{ $article->posted_by }}}</div>
