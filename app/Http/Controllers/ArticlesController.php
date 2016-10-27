@@ -55,22 +55,20 @@ class ArticlesController extends Controller
         return redirect()->to('/');
     }
 
-    public function getDelete($id)
+    public function getDestroy($id)
     {
         $article = Article::find($id);
 
-//        return view('delete')->withArticle($article);
         return view('articles.delete', compact('article'));
     }
 
-    public function postDelete(Request $request, $id)
+    public function postDestroy($id)
     {
-        $data = $request->all();
         $article = Article::find($id);
-        $article->fill($data);
-
         $article->delete();
 
         return redirect()->to('/');
+
     }
+
 }

@@ -45,11 +45,10 @@ Route::post('/articles/edit/{id}', [
 ]);
 
 Route::get('/articles/delete/{id}', [
-    'uses' => 'ArticlesController@getDelete',
-    'as' => 'delete',
+    'uses' => 'ArticlesController@getDestroy',
 ]);
 
 Route::post('/articles/delete/{id}', [
-    'uses' => 'ArticlesController@postDelete',
-    'as' => 'post_delete',
+    'uses' => 'ArticlesController@postDestroy',
+    'as' => 'post_destroy',
 ]);
