@@ -14,7 +14,7 @@
                 <div><a href="/articles/new" class="btn btn-primary" style="position: fixed; top: 66px; right: 16px">記事を新規作成する</a></div>
                 @if (count($articles) >= 1)
                     @foreach($articles as $article)
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading"><strong>{{{ $article->title }}}</strong></div>
                             <div class="panel-body">{{{ $article->comment }}}</div>
                             <div class ="panel-footer" style = "height: 55px">
