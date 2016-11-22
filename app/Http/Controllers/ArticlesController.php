@@ -13,7 +13,6 @@ class ArticlesController extends Controller
     public function getIndex()
     {
         $articles = Article::all();
-
         return view('articles.index')->with(compact('articles'));
     }
 
@@ -29,18 +28,13 @@ class ArticlesController extends Controller
         $article->posted_by = $data['posted_by'];
         $article->title = $data['title'];
         $article->comment = $data['comment'];
-
-
         $article->save();
-
         return redirect()->to('/');
     }
 
     public function getEdit($id)
     {
         $article = Article::find($id);
-
-//        return view('edit')->withArticle($article);
         return view('articles.edit', compact('article'));
     }
 
@@ -49,16 +43,13 @@ class ArticlesController extends Controller
         $data = $request->all();
         $article = Article::find($id);
         $article->fill($data);
-
         $article->save();
-
         return redirect()->to('/');
     }
 
     public function getDestroy($id)
     {
         $article = Article::find($id);
-
         return view('articles.delete', compact('article'));
     }
 
@@ -66,9 +57,7 @@ class ArticlesController extends Controller
     {
         $article = Article::find($id);
         $article->delete();
-
         return redirect()->to('/');
-
     }
 
 }
